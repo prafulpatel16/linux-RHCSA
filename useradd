@@ -1,0 +1,50 @@
+
+
+Linux - Processes Management
+
+Whenever you issue a command in Unix, it creates, or starts, a new process. When you tried out the ls command to list the directory contents, you started a process. A process, in simple terms, is an instance of a running program.
+
+The operating system tracks processes through a five-digit ID number known as the pid or the process ID. Each process in the system has a unique pid.
+
+Pids eventually repeat because all the possible numbers are used up and the next pid rolls or starts over. At any point of time, no two processes with the same pid exist in the system because it is the pid that Unix uses to track each process.
+
+User info
+
+FILES
+       /etc/passwd
+           User account information.
+
+       /etc/shadow
+           Secure user account information.
+
+       /etc/group
+           Group account information.
+
+       /etc/gshadow
+           Secure group account information.
+
+       /etc/default/useradd
+           Default values for account creation.
+
+       /etc/skel/
+           Directory containing default files.
+
+       /etc/subgid
+           Per user subordinate group IDs.
+
+       /etc/subuid
+           Per user subordinate user IDs.
+
+       /etc/login.defs
+           Shadow password suite configuration.
+
+
+
+useradd tom
+
+ -e, --expiredate EXPIRE_DATE
+           The date on which the user account will be disabled. The date is specified in the format YYYY-MM-DD.
+           If not specified, useradd will use the default expiry date specified by the EXPIRE variable in
+           /etc/default/useradd, or an empty string (no expiry) by default.
+           
+           
